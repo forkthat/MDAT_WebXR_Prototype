@@ -1,8 +1,5 @@
 <html>
     <head>
-        <!-- CSS -->
-        <link rel="stylesheet" href="./assets/css/style.css" />
-
         <!-- JS -->
         <!-- AFrame -->
         <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
@@ -22,7 +19,7 @@
                 <a-asset-item id="garage" src="./assets/gltf/Garage.glb"></a-asset-item>
             </a-assets>
 
-            <!-- World Objects -->
+            <!-- Camera Rigging -->
             <a-entity id="rig"
                 movement-controls="controls: checkpoint"
                 checkpoint-controls="mode: animate"
@@ -35,40 +32,21 @@
             </a-entity>
 
             <!-- CHECKPOINTS: Structure_01.glb -->
-            <!-- <a-cylinder id="checkpoint-living-room"
-                checkpoint
-                class="checkpoint-interactive"
-                radius="0.5"
-                height="0.2"
-                position="0 0.1 0"
-                color="yellow">
-            </a-cylinder>
-            <a-cylinder id="checkpoint-dining-area"
-                checkpoint
-                class="checkpoint-interactive"
-                radius="0.5"
-                height="0.2"
-                position="-3 0.1 5"
-                color="yellow">
-            </a-cylinder>
-            <a-cylinder id="checkpoint-kitchen"
-                checkpoint
-                class="checkpoint-interactive"
-                radius="0.5"
-                height="0.2"
-                position="1 0.1 5"
-                color="yellow">
-            </a-cylinder> -->
+            <a-entity gltf-model="#room" position="0 0 0"></a-entity>
+            <a-cylinder id="checkpoint-living-room" checkpoint class="checkpoint-interactive" radius="0.5" height="0.2" position="0 0.1 0" color="yellow"></a-cylinder>
+            <a-cylinder id="checkpoint-dining-area" checkpoint class="checkpoint-interactive" radius="0.5" height="0.2" position="-2.5 0.1 4.5" color="yellow"></a-cylinder>
+            <a-cylinder id="checkpoint-kitchen" checkpoint class="checkpoint-interactive" radius="0.5" height="0.2" position="1 0.1 5.5" color="yellow"></a-cylinder>
+            <a-cylinder id="checkpoint-corridor" checkpoint class="checkpoint-interactive" radius="0.5" height="0.2" position="-2.5 0.1 -4" color="yellow"></a-cylinder>
 
             <!-- CHECKPOINTS: Garage.glb -->
-            <a-cylinder id="checkpoint-garage-1" checkpoint class="checkpoint-interactive" position="0 0.1 0" color="yellow" radius="0.5" height="0.2"></a-cylinder>
-            <a-cylinder id="checkpoint-garage-2" checkpoint class="checkpoint-interactive" position="0 0.1 1" color="yellow" radius="0.5" height="0.2"></a-cylinder>
+            <!-- <a-entity gltf-model="#garage" position="0 0 0"></a-entity>
+            <a-cylinder id="checkpoint-garage-1" checkpoint class="checkpoint-interactive" radius="0.5" height="0.2" position="0 0.1 0" color="yellow"></a-cylinder>
+            <a-cylinder id="checkpoint-garage-2" checkpoint class="checkpoint-interactive" radius="0.5" height="0.2" position="0 0.1 1" color="yellow"></a-cylinder> -->
 
-            <a-entity gltf-model="#garage" position="0 0 0"></a-entity>
             <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
             <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
-            <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
+            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
             <a-sky color="#ECECEC"></a-sky>
         </a-scene>
     </body>
